@@ -1,17 +1,24 @@
 <canvas width="600" height="400"></canvas>
 
 <script>
+
 	//criando canvas no geral
+
 	var tela = document.querySelector('canvas');
 	var pincel = tela.getContext('2d');
+	console.log(tela);
+	document.write("<h1>Esse é meu titulo, adicionando algo novo</h1>");
+
 	pincel.fillStyle = 'yellowgreen'; //alteração recente apedido do setor de design
 	pincel.fillRect(0, 0, 600, 400);
-	
+	pincel.font = "50px";
+	pincel.fillText("Leonsk", 100, 100)
+
 	
 	var raio = 10;
 	var xAleatorio;
 	var yAleatorio;
-	
+	//desenha circulo para ser o alvo no jogo
 	function desenhaCirculo(x, y, raio, cor){
 	
 		pincel.fillStyle = cor;
